@@ -1,6 +1,6 @@
 def checklen(a,s1):
     if a == len(s1) - 1:
-        print("Yes")
+        print("True")
         exit(1)
 
 def checkdic(d):
@@ -9,11 +9,20 @@ def checkdic(d):
         if val not in temp[:]:
             temp.append(val)
         else:
-            print("No")
+            print("False")
             exit(1)
 
-s1 = input()
-s2 = input()
+s = input()
+s1 = []
+s2 = []
+for i in range(0,len(s)):
+    if s[i] == ' ':
+        continue
+    else:
+        if ' ' in s[:i]:
+            s2.append(s[i])
+        else:
+            s1.append(s[i])
 coun = []
 for i in range(len(s1)):
     coun.append(1)
@@ -34,11 +43,12 @@ for i in range(0,len(s1)):
             if d[s1[i]] == s2[i]:
                 checklen(i,s1)
             else:
-                print("No")
+                print("False")
                 exit(1)
         else:
             checklen(i,s1)
     else:
-        print("No")
+        print("False")
         break
+
 
