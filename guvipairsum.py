@@ -33,5 +33,8 @@ for i in range(0,n):
 li = []
 for key,val in dic.items():
     li.extend([key,val])
+if li == []:
+    print("No pair")
+    exit(1)
 for i in range(0,len(li)):
     print(li[i],end = " ")
