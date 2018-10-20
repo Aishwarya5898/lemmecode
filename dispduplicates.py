@@ -15,6 +15,9 @@ res = []
 for key,val in d.items():
     if val > 1:
         res.append(key)
+if res == []:
+    print("Unique")
+    exit(1)
 res.sort()
 for i in range(0,len(res)):
     print(res[i],end =" ")
